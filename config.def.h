@@ -1,5 +1,11 @@
 /* See LICENSE file for copyright and license details. */
 
+#define XF86AudioMute 0x1008ff12
+#define XF86AudioLowerVolume 0x1008ff11
+#define XF86AudioRaiseVolume 0x1008ff13
+#define XF86MonBrightnessDown 0x1008ff03
+#define XF86MonBrightnessUp 0x1008ff02
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 16;        /* gaps between windows */
