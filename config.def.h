@@ -73,6 +73,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *brightupcmd[] = { "/home/relkochta/.scripts/bright-up.sh", NULL };
 static const char *brightdowncmd[] = { "/home/relkochta/.scripts/bright-down.sh", NULL };
+static const char *volupcmd[] = { "/home/relkochta/.scripts/vol-up.sh", NULL };
+static const char *voldowncmd[] = { "/home/relkochta/.scripts/vol-down.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -80,6 +82,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ 0, XF86MonBrightnessUp, spawn, {.v = brightupcmd } },
 	{ 0, XF86MonBrightnessDown, spawn, {.v = brightdowncmd } },
+	{ 0, XF86AudioRaiseVolume, spawn, {.v = volupcmd } },
+	{ 0, XF86AudioLowerVolume, spawn, {.v = voldowncmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
